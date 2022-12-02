@@ -1,28 +1,17 @@
 <?php 
     include_once '../config/stuff.php';
+    include_once '../config/connection.php';
     include_once '../functions/html.php';
     define('PAGE_NAME', 'Entrar');
     $img_number = rand(1, 10);
     $user_image = 'img/user.png';
+
+    $pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'admin@admin.com', senha = '123', nivel_id = '2'");
+
+    include_once 'includes/header.php';
+
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    
-    <?php utf8() ?>
-
-    <?php viewport() ?>
-
-    <title><?= APP_NAME ?> - <?= PAGE_NAME ?></title>
-
-    <?php bootstrap() ?>
-
-    <?php css('index.css') ?>
-
-    <?php favicon() ?>
-
-</head>
 <body 
     style="
         background-image: url('img/<?php echo $img_number ?>.jpg');
