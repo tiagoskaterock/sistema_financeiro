@@ -3,9 +3,9 @@
 include_once '../config/connection.php';
 include_once '../functions/html.php';
 
-define('APP_NAME', 'Sistema Financeiro');
+define('APP_NAME', 'Your System Name');
 
-define('URL', 'http://localhost/cupcake_software_projects/sistema_financeiro_php_pdo');
+define('URL', 'http://localhost/your_system');
 
 define('ADMIN_EMAIL', 'admin@admin.com');
 

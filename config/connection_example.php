@@ -2,13 +2,13 @@
 
 date_default_timezone_set('America/Sao_Paulo');
 
-$database = 'financeiro';
+$database = 'your_database_name';
 
 $servername = 'localhost';
 
-$username = 'tiago';
+$username = 'database_username';
 
-$password = '123';
+$password = 'database_user_password';
 
 try {
 	$pdo = new PDO("mysql:dbname=$database;host=$servername", "$username", "$password");	
