@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 30-Nov-2022 às 22:06
+-- Tempo de geração: 01-Dez-2022 às 22:46
 -- Versão do servidor: 5.7.40-0ubuntu0.18.04.1
 -- versão do PHP: 8.1.13
 
@@ -55,6 +55,13 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `nivel_id`) VALUES
+(1, 'Administrador', 'admin@admin.com', '123', 2);
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -85,7 +92,7 @@ ALTER TABLE `niveis`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para despejos de tabelas

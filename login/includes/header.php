@@ -1,3 +1,9 @@
+<?php 
+
+include_once '../config/stuff.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

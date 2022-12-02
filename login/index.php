@@ -1,25 +1,14 @@
 <?php 
-    include_once '../config/stuff.php';
-    include_once '../config/connection.php';
-    include_once '../functions/html.php';
+
     define('PAGE_NAME', 'Entrar');
     $img_number = rand(1, 10);
     $user_image = 'img/user.png';
 
-    // $pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'admin@admin.com', senha = '123', nivel_id = '2'");
-
-    include_once 'includes/header.php';
+    include_once 'includes/header.php';    
 
 ?>
 
-<body 
-    style="
-        background-image: url('img/<?php echo $img_number ?>.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;         
-        "
->
+<body style="background-image: url('img/<?php echo $img_number ?>.jpg');">
 
     <div class="container mt-5">        
         <div class="row">
@@ -28,9 +17,26 @@
                     <h1 class="text-center login-title mb-3"><?= APP_NAME ?></h1>
                     <img class="profile-img" src="<?= $user_image ?>"
                         alt="Imagem de Usuário">
+
                     <form class="form-signin" method="POST" action="authenticate.php">
-                    <input type="email" class="form-control mb-3 mt-2" placeholder="Email" required autofocus>
-                    <input type="password" class="form-control" placeholder="Senha" required>
+
+                    <input 
+                        type="email" 
+                        name="email" 
+                        class="form-control mb-3 mt-2" 
+                        placeholder="Email" 
+                        required 
+                        autofocus
+                    >
+
+                    <input 
+                        type="password" 
+                        class="form-control" 
+                        placeholder="Senha" 
+                        name="senha"
+                        required
+                    >
+
                     <button class="btn btn-md btn-outline-primary mt-2" type="submit">
                         <?= PAGE_NAME ?></button>
                     </form>
@@ -43,4 +49,3 @@
 </body>
 </html>
 
-    
