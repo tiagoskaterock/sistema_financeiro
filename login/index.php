@@ -6,7 +6,7 @@
     $img_number = rand(1, 10);
     $user_image = 'img/user.png';
 
-    $pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'admin@admin.com', senha = '123', nivel_id = '2'");
+    // $pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'admin@admin.com', senha = '123', nivel_id = '2'");
 
     include_once 'includes/header.php';
 
