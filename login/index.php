@@ -18,13 +18,14 @@
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="../img/logo/logo.ico" type="image/x-icon">
 </head>
 <body 
     style="
         background-image: url('img/<?php echo $img_number ?>.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center;         
         "
 >
 
@@ -38,13 +39,14 @@
                     <form class="form-signin" method="POST" action="authenticate.php">
                     <input type="email" class="form-control mb-3 mt-2" placeholder="Email" required autofocus>
                     <input type="password" class="form-control" placeholder="Senha" required>
-                    <button class="btn btn-md btn-outline-primary btn-block mt-2" type="submit">
+                    <button class="btn btn-md btn-outline-primary mt-2" type="submit">
                         <?= PAGE_NAME ?></button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+        
 
 </body>
 </html>
