@@ -2,6 +2,7 @@
     include_once '../config/stuff.php';
     define('PAGE_NAME', 'Entrar');
     $img_number = rand(1, 10);
+    $user_image = 'img/user.png';
 ?>
 
 <!DOCTYPE html>
@@ -32,8 +33,8 @@
             <div class="col-sm-6 col-md-4 offset-md-4 mt-5">
                 <div class="account-wall text-center rounded">
                     <h1 class="text-center login-title mb-3"><?= APP_NAME ?></h1>
-                    <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-                        alt="">
+                    <img class="profile-img" src="<?= $user_image ?>"
+                        alt="Imagem de Usuário">
                     <form class="form-signin" method="POST" action="authenticate.php">
                     <input type="email" class="form-control mb-3 mt-2" placeholder="Email" required autofocus>
                     <input type="password" class="form-control" placeholder="Senha" required>
