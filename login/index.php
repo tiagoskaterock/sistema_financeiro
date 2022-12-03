@@ -22,7 +22,7 @@
             <div class="col-sm-6 col-md-4 offset-md-4 mt-5">
                 <div class="account-wall text-center rounded">
                     <h1 class="text-center login-title mb-3"><?= APP_NAME ?></h1>
-                    <img class="profile-img" src="<?= $user_image ?>"
+                    <img class="profile-img" src="<?= avatar() ?>"
                         alt="Imagem de Usuário">
 
                     <form class="form-signin" method="POST" action="authenticate.php">

@@ -1,7 +1,17 @@
 <?php
 
+include_once 'config.php';
+
 function favicon() {
-	echo '<link rel="shortcut icon" href="../img/logo/logo.ico" type="image/x-icon">';
+	echo '<link rel="shortcut icon" href="' . URL . '/img/logo/logo.ico" type="image/x-icon">';
+}
+
+function logo() {
+	echo URL . '/img/logo/logo.png';
+}
+
+function avatar() {
+	echo URL . '/admin/img/avatar.png';
 }
 
 function css($path) {

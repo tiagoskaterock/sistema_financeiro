@@ -19,6 +19,7 @@ include 'includes/aside.php';
 
 
 
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -39,6 +40,8 @@ include 'includes/aside.php';
     </div>
     <!-- /.content-header -->
 
+  <?php include 'dashboard/modal.php' ?>
+  
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
