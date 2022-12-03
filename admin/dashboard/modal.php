@@ -15,12 +15,12 @@
 
          <div class="form-group">
            <label for="nome">Nome</label>
-           <input type="text" class="form-control" name="nome" aria-describedby="Nome" placeholder="Nome">
+           <input type="text" class="form-control" name="nome" aria-describedby="Nome" placeholder="Nome" value="<?= $usuario['nome'] ?>">
          </div>
 
          <div class="form-group">
            <label for="email">Email</label>
-           <input type="email" class="form-control" name="email" placeholder="Email">
+           <input type="email" class="form-control" name="email" placeholder="Email" value="<?= $usuario['email'] ?>">
          </div>
 
          <div class="form-group">

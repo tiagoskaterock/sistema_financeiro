@@ -14,7 +14,7 @@
       <img src="<?= avatar() ?>" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-      <a href="#" class="d-block"><?= $_SESSION['username'] ?></a>
+      <a href="#" class="d-block"><?= $usuario['nome'] ?></a>
     </div>
   </div>
 

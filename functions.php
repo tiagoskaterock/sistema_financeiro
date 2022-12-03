@@ -23,3 +23,8 @@ function escape($string) {
 function logout() {
 	return URL . '/logout';
 }
+
+function sql($sql) {
+  global $conn;
+  return mysqli_fetch_assoc(mysqli_query($conn, $sql));
+}

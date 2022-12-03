@@ -9,6 +9,11 @@ if (!isset($_SESSION['logado'])) {
 	echo '<script>window.location="' . URL .  '/login/"</script>';
 }
 
+// dados do usuário
+$user_id = $_SESSION['user_id'];
+
+$usuario = sql("SELECT * FROM usuarios WHERE id = '$user_id'");
+
 include 'includes/header.php';
 
 include 'includes/aside.php';
