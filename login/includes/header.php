@@ -1,6 +1,8 @@
 <?php 
 
-include_once '../config/stuff.php';
+include '../config.php';
+include '../functions.php';
+include '../helpers.php';
 
 ?>
 

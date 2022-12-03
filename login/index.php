@@ -1,10 +1,17 @@
 <?php 
 
+    // Logado vai para o admin
+    @session_start();
+
+    if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
+        echo '<script>window.location="../admin"</script>';
+    }
+
     define('PAGE_NAME', 'Entrar');
     $img_number = rand(1, 10);
     $user_image = 'img/user.png';
 
-    include_once 'includes/header.php';    
+    include_once 'includes/header.php';  
 
 ?>
 

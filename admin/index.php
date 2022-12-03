@@ -2,10 +2,11 @@
 
 @session_start();
 
-include_once '../config/stuff.php';
+include '../functions.php';
+include '../helpers.php';
 
 if (!isset($_SESSION['logado'])) {
-	go_to_login();	
+	echo '<script>window.location="' . URL .  '/login/"</script>';
 }
 
 dpr($_SESSION);	

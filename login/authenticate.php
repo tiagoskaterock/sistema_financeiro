@@ -2,62 +2,38 @@
 
 @session_start();
 
-include_once '../config/stuff.php';
+include_once '../functions.php';
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+$email = escape($_POST['email']);
+$senha = escape($_POST['senha']);
 
-// apenas cadastrados
-$query = $pdo->prepare("
-	SELECT 
-		usuarios.id as usuario_id, 
-		usuarios.senha as usuario_senha, 
-		usuarios.nome as usuario_nome, 
-		usuarios.email as usuario_email, 
-		niveis.id as nivel_id, 
-		niveis.titulo as nivel_nome 
-	FROM 
-		usuarios 
-	INNER JOIN 
-		niveis 
-	ON 
-		usuarios.nivel_id = niveis.id
-	WHERE 
-		usuarios.email = '$email'
-	AND 
-		usuarios.senha = '$senha'
-	;
-");
+$sql = "
+	SELECT * FROM usuarios
+	INNER JOIN niveis
+	ON usuarios.nivel_id = niveis.id
+	WHERE usuarios.senha = '$senha' AND usuarios.email = '$email'
+";
 
-$query->bindValue(":email", $email);
-$query->bindValue(":senha", $senha);
+$result = mysqli_query($conn, $sql);
 
-$query->execute();
+$total = mysqli_num_rows($result);
 
-$res = $query->fetchAll(PDO::FETCH_ASSOC);
-$total_reg = count($res);
-
-$total_reg > 0 ? $logar = true : $logar = false;
-
-if (!$logar) {
+// senha ou email errados
+if ($total < 1) {  
 	echo '<script>window.alert("Dados Incorretos")</script>';
-	go_to_login();
+	echo '<script>window.location="../login"</script>';
+	session_unset();
+	session_destroy();
+	die();
 }
 
-$_SESSION['usuario_id'] = $res[0]['usuario_id'];
-$_SESSION['usuario_nome'] = $res[0]['usuario_nome'];
-$_SESSION['usuario_email'] = $res[0]['usuario_email'];
-$_SESSION['nivel_id'] = $res[0]['nivel_id'];
+$row = mysqli_fetch_assoc($result);
+
+$_SESSION['username'] = $row['nome'];
+$_SESSION['email'] = $row['email'];
+$_SESSION['nivel_id'] = $row['nivel_id'];
+$_SESSION['user_id'] = $row['id'];
+$_SESSION['nivel_titulo'] = $row['titulo'];
 $_SESSION['logado'] = true;
 
-// admin
-if ($_SESSION['nivel_id'] == 1) {
-	echo '<script>window.alert("Logando como administrador")</script>';
-	go_to_admin();	
-}
-
-// usuário
-else if ($_SESSION['nivel_id'] == 2) {
-	echo '<script>window.alert("Logando como usuário")</script>';
-	go_to_admin();		
-}
+echo '<script>window.location="' . URL .  '/admin/"</script>';
