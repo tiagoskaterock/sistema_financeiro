@@ -1,1 +1,3 @@
-editar-perfil.php
+<?php
+
+echo 'editar-perfil.php';

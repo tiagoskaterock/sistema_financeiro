@@ -28,7 +28,7 @@
            <input type="password" class="form-control" name="senha" placeholder="******">
          </div>
 
-         <div id="mensagem-perfil text-center"><small>Teste</small></div>
+         <div id="mensagem-perfil" class="text-center"><small></small></div>
 
          <button type="submit" class="btn btn-primary">Salvar</button>
        </form>
@@ -55,7 +55,7 @@
     var formData = new FormData(this);
 
     $.ajax({
-      url: "editar-perfil.php",
+      url: "php/editar-perfil.php",
       type: 'POST',
       data: formData,
 
@@ -67,7 +67,7 @@
           //$('#nome').val('');
           //$('#cpf').val('');
           $('#btn-fechar-perfil').click();
-          window.location = "index.php?pagina="+pag;
+          window.location = "index.php?";
 
         } 
         else {
