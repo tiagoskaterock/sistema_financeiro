@@ -28,3 +28,8 @@ function sql($sql) {
   global $conn;
   return mysqli_fetch_assoc(mysqli_query($conn, $sql));
 }
+
+function sql_update($sql) {
+	global $conn;
+  mysqli_query($conn, $sql);
+}

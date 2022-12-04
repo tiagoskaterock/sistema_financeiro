@@ -25,8 +25,10 @@
 
          <div class="form-group">
            <label for="senha">Senha</label>
-           <input type="password" class="form-control" name="senha" placeholder="******">
+           <input type="password" class="form-control" name="senha" placeholder="******" required min='3'>
          </div>
+
+         <input type="hidden" name="user_id" value="<?= $user_id ?>">
 
          <div id="mensagem-perfil" class="text-center"><small></small></div>
 
@@ -71,7 +73,7 @@
 
         } 
         else {
-          $('#mensagem-perfil').addClass('text-danger')
+          $('#mensagem-perfil').addClass('text-success')
         }
 
         $('#mensagem-perfil').text(mensagem)
