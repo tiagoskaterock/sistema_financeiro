@@ -11,7 +11,7 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-       <form method="post" action="#">
+       <form method="post" action="php/editar-perfil.php" id="form-perfil">
 
          <div class="form-group">
            <label for="nome">Nome</label>
@@ -28,6 +28,8 @@
            <input type="password" class="form-control" name="senha" placeholder="******">
          </div>
 
+         <div id="mensagem-perfil text-center"><small>Teste</small></div>
+
          <button type="submit" class="btn btn-primary">Salvar</button>
        </form>
            
@@ -35,9 +37,52 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+        <button id="btn-fechar-perfil" type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
       </div>
 
     </div>
   </div>
 </div>
+
+
+
+
+
+<!-- Ajax para inserir ou editar dados -->
+<script>
+  $("#form-perfil").submit(function () {
+    event.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: "editar-perfil.php",
+      type: 'POST',
+      data: formData,
+
+      success: function (mensagem) {
+
+        $('#mensagem-perfil').removeClass()
+
+        if (mensagem.trim() == "Salvo com Sucesso!") {
+          //$('#nome').val('');
+          //$('#cpf').val('');
+          $('#btn-fechar-perfil').click();
+          window.location = "index.php?pagina="+pag;
+
+        } 
+        else {
+          $('#mensagem-perfil').addClass('text-danger')
+        }
+
+        $('#mensagem-perfil').text(mensagem)
+
+      },
+
+      cache: false,
+      contentType: false,
+      processData: false,
+        
+    });
+
+  });
+</script>
