@@ -72,8 +72,11 @@
           window.location = "index.php?";
 
         } 
+        else if(mensagem.trim() == "Email já cadastrado por outro usuário") {
+          $('#mensagem-perfil').addClass('alert alert-warning')          
+        }
         else {
-          $('#mensagem-perfil').addClass('text-success')
+          $('#mensagem-perfil').addClass('alert alert-success')
         }
 
         $('#mensagem-perfil').text(mensagem)
