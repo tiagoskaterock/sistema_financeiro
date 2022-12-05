@@ -18,6 +18,10 @@ function css($path) {
 	echo '<link rel="stylesheet" href="' . $path . '">';
 }
 
+function js($path) {
+	echo '<script src="' . $path . '"></script>';
+}
+
 function bootstrap() {
 	echo 
 	'
