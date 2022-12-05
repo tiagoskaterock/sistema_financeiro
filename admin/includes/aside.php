@@ -97,7 +97,7 @@
 
 
 
-<!-- Ajax mostrar nome do usuário logado atualizado em tempo real -->
+<!-- Ajax para mostrar nome do usuário logado atualizado em tempo real -->
 <script>
   setInterval(function () {
     $.ajax({url: "php/username_aside.php", 
@@ -109,7 +109,7 @@
 </script>
 
 
-<!-- Ajax mostrar email do usuário logado atualizado em tempo real -->
+<!-- Ajax para mostrar email do usuário logado atualizado em tempo real -->
 <script>
   setInterval(function () {
     $.ajax({url: "php/useremail_aside.php", 

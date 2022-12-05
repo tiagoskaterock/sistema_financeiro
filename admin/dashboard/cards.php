@@ -28,3 +28,14 @@ $total_usuarios = $sql['total'];
 
 </div>
 <!-- /.row -->
+
+<!-- Ajax para mostrar total de usuários em tempo real -->
+<script>
+  setInterval(function () {
+    $.ajax({url: "php/username_aside.php", 
+      success: function(result){
+        $("#username_aside").html(result);
+      }
+    });
+  }, 1000);
+</script>
