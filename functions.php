@@ -38,3 +38,8 @@ function sql_insert($sql) {
 	global $conn;
   mysqli_query($conn, $sql);
 }
+
+function sql_delete($sql) {
+	global $conn;
+  mysqli_query($conn, $sql);
+}

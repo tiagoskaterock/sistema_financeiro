@@ -66,7 +66,7 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
                         <td><?= $row['titulo'] ?></td>
                         <td>
                           <?php btn_editar("#") ?>
-                          <?php btn_excluir("#") ?>
+                          <?php btn_excluir("delete.php", $row['id']) ?>
                         </td>
                       </tr>
                       <?php

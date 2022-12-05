@@ -20,9 +20,15 @@ function btn_salvar() { ?>
 	<button type="submit" class="btn-sm btn btn-success" title="Salvar">Salvar</button> <?php
 }
 
-function btn_excluir($link) { ?>
-	<form method="post" action="<?= $link ?>" class="d-inline">
-		<button type="submit" class="btn btn-sm btn-outline-danger" title="Excluir">
+function btn_excluir($link, $id) { ?>
+	<form method="post" action="<?= $link ?>" class="d-inline">		
+		<button 
+			type="submit" 
+			class="btn btn-sm btn-outline-danger" 
+			name="excluir" 
+			value="<?= $id ?>" 
+			title="Excluir"
+			onclick="return confirm('Deseja mesmo excluir?')">
 			<i class="fas fa-trash"></i>
 		</button>
 	</form> <?php
