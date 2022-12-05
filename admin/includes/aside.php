@@ -57,19 +57,19 @@
             </a>
             <ul class="nav nav-treeview" style="display: block;">
               <li class="nav-item">
-                <a href="cadastros/clientes" class="nav-link">
+                <a href="<?= URL ?>/admin/cadastros/clientes" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Clientes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="cadastros/usuarios" class="nav-link">
+                <a href="<?= URL ?>/admin/cadastros/usuarios" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Usuários</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="cadastros/niveis" class="nav-link">
+                <a href="<?= URL ?>/admin/cadastros/niveis" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Níveis</p>
                 </a>

@@ -45,10 +45,15 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis");
               <div class="card-body">
 
                 <table id="niveis_table" class="table table-bordered table-striped">
+                <?php btn_novo("#") ?>
+                <br>
+                <br>
+
                   <thead>
                   <tr>
                     <th>ID</th>
                     <th>Título</th>
+                    <th>Ações</th>
                   </tr>
                   </thead>
 
@@ -61,6 +66,10 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis");
                       <tr>
                         <td><?= $row['id'] ?></td>
                         <td><?= $row['titulo'] ?></td>
+                        <td>
+                          <?php btn_editar("#") ?>
+                          <?php btn_excluir("#") ?>
+                        </td>
                       </tr>
                       <?php
                     }
