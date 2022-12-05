@@ -198,3 +198,4 @@ $usuario = sql("SELECT * FROM usuarios WHERE id = '$user_id'");
 
   <?php include('alert_success.php') ?>
   <?php include('alert_danger.php') ?>
+  <?php include('alert_warning.php') ?>
