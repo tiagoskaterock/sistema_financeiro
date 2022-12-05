@@ -72,6 +72,7 @@
   }, 1000);
 </script>
 
+
 <!-- Ajax mostrar email do usuário logado atualizado em tempo real -->
 <script>
   setInterval(function () {
