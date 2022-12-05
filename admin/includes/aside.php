@@ -14,7 +14,8 @@
       <img src="<?= avatar() ?>" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-      <a href="#" class="d-block"><?= $usuario['nome'] ?></a>
+      <a href="#" class="d-block" id="username_aside"><?= $usuario['nome'] ?></a>
+      <small class="text-light" id="useremail_aside"><?= $usuario['email'] ?></small>
     </div>
   </div>
 
@@ -57,3 +58,27 @@
 </div>
 <!-- /.sidebar -->
 </aside>
+
+
+
+<!-- Ajax mostrar nome do usuário logado atualizado em tempo real -->
+<script>
+  setInterval(function () {
+    $.ajax({url: "php/username_aside.php", 
+      success: function(result){
+        $("#username_aside").html(result);
+      }
+    });
+  }, 1000);
+</script>
+
+<!-- Ajax mostrar email do usuário logado atualizado em tempo real -->
+<script>
+  setInterval(function () {
+    $.ajax({url: "php/useremail_aside.php", 
+      success: function(result){
+        $("#useremail_aside").html(result);
+      }
+    });
+  }, 1000);
+</script>
