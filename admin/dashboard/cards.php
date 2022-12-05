@@ -14,7 +14,7 @@ $total_usuarios = $sql['total'];
     <!-- small box -->
     <div class="small-box bg-warning">
       <div class="inner">
-        <h3><?= $total_usuarios ?></h3>
+        <h3 id="total_usuarios"><?= $total_usuarios ?></h3>
 
         <p>Usuários Cadastrados</p>
       </div>
@@ -28,3 +28,15 @@ $total_usuarios = $sql['total'];
 
 </div>
 <!-- /.row -->
+
+
+<!-- Ajax para mostrar total de usuários em tempo real -->
+<script>
+  setInterval(function () {
+    $.ajax({url: "php/total_usuarios.php", 
+      success: function(result){
+        $("#total_usuarios").html(result);
+      }
+    });
+  }, 1000);
+</script>
