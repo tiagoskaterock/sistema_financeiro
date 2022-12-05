@@ -29,7 +29,6 @@ $total_usuarios = $sql['total'];
 </div>
 <!-- /.row -->
 
-
 <!-- Ajax para mostrar total de usuários em tempo real -->
 <script>
   setInterval(function () {

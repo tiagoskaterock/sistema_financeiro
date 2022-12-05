@@ -44,6 +44,42 @@
       </li>
 
 
+
+
+      <!-- Cadastros -->
+      <li class="nav-item menu-is-opening menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-circle text-info"></i>
+              <p>
+                Cadastros
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a href="cadastros/clientes" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Clientes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="cadastros/usuarios" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Usuários</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="cadastros/niveis" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Níveis</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
       <li class="nav-item">
         <a href="<?= logout() ?>" class="nav-link">
           <i class="nav-icon far fa-circle text-info"></i>
@@ -61,7 +97,7 @@
 
 
 
-<!-- Ajax mostrar nome do usuário logado atualizado em tempo real -->
+<!-- Ajax para mostrar nome do usuário logado atualizado em tempo real -->
 <script>
   setInterval(function () {
     $.ajax({url: "php/username_aside.php", 
@@ -73,7 +109,7 @@
 </script>
 
 
-<!-- Ajax mostrar email do usuário logado atualizado em tempo real -->
+<!-- Ajax para mostrar email do usuário logado atualizado em tempo real -->
 <script>
   setInterval(function () {
     $.ajax({url: "php/useremail_aside.php", 
