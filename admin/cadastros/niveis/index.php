@@ -5,11 +5,9 @@ include "../../../functions.php";
 include "../../includes/header.php";
 include "../../includes/aside.php";
 
-$niveis = mysqli_query($conn, "SELECT * FROM niveis");
+$niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
 
 ?>
-
-
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -44,7 +42,7 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis");
               <!-- /.card-header -->
               <div class="card-body">
 
-                <?php btn_novo("#") ?>
+                <?php btn_novo(URL . "/admin/cadastros/niveis/criar") ?>
                 <br>
                 <br>
 

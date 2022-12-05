@@ -33,3 +33,8 @@ function sql_update($sql) {
 	global $conn;
   mysqli_query($conn, $sql);
 }
+
+function sql_insert($sql) {
+	global $conn;
+  mysqli_query($conn, $sql);
+}

@@ -16,6 +16,10 @@ function btn_editar($link) { ?>
 	</a> <?php
 }
 
+function btn_salvar() { ?>
+	<button type="submit" class="btn-sm btn btn-success" title="Salvar">Salvar</button> <?php
+}
+
 function btn_excluir($link) { ?>
 	<form method="post" action="<?= $link ?>" class="d-inline">
 		<button type="submit" class="btn btn-sm btn-outline-danger" title="Excluir">
