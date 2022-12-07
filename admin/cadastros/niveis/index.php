@@ -65,7 +65,7 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
                         <td><?= $row['id'] ?></td>
                         <td><?= $row['titulo'] ?></td>
                         <td>
-                          <?php btn_editar("#") ?>
+                          <?php btn_editar(URL . 'admin/cadastros/niveis/editar?id=' . $row['id']) ?>
                           <?php btn_excluir("delete.php", $row['id']) ?>
                         </td>
                       </tr>
