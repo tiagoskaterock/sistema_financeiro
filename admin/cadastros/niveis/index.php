@@ -20,7 +20,9 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?= URL ?>/admin">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="<?= URL ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?= URL ?>admin">Admin</a></li>
+              <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros">Cadastros</a></li>
               <li class="breadcrumb-item active">Níveis</li>
             </ol>
           </div>
@@ -42,7 +44,7 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
               <!-- /.card-header -->
               <div class="card-body">
 
-                <?php btn_novo(URL . "/admin/cadastros/niveis/criar") ?>
+                <?php btn_novo(URL . "admin/cadastros/niveis/criar") ?>
                 <br>
                 <br>
 
@@ -65,6 +67,7 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
                         <td><?= $row['id'] ?></td>
                         <td><?= $row['titulo'] ?></td>
                         <td>
+                          <?php btn_visualizar(URL . 'admin/cadastros/niveis/nivel?id=' . $row['id']) ?>
                           <?php btn_editar(URL . 'admin/cadastros/niveis/editar?id=' . $row['id']) ?>
                           <?php btn_excluir("delete.php", $row['id']) ?>
                         </td>

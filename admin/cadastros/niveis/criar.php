@@ -18,8 +18,11 @@ include "../../includes/aside.php";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?= URL ?>/admin">Home</a></li>
-              <li class="breadcrumb-item active">Níveis</li>
+              <li class="breadcrumb-item"><a href="<?= URL ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?= URL ?>admin">Admin</a></li>
+              <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros">Cadastros</a></li>
+              <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros/niveis">Níveis</a></li>
+              <li class="breadcrumb-item active">Criar</li>
             </ol>
           </div>
         </div>

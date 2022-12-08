@@ -29,6 +29,11 @@ function sql($sql) {
   return mysqli_fetch_assoc(mysqli_query($conn, $sql));
 }
 
+function sql_count($table) {
+	$sql = sql("SELECT count(id) as total FROM $table");
+	return $sql['total'];
+}
+
 function sql_update($sql) {
 	global $conn;
   mysqli_query($conn, $sql);

@@ -24,10 +24,12 @@ $nivel = sql("SELECT * FROM niveis WHERE id = '$id'");
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?= URL ?>admin">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?= URL ?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?= URL ?>admin">Admin</a></li>
+              <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros">Cadastros</a></li>
               <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros/niveis">Níveis</a></li>
-              <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros/niveis/nivel/id"><?php echo $nivel['titulo'] ?></a></li>
-              <li class="breadcrumb-item active"><?php echo PAGE_TITLE ?></li>
+              <li class="breadcrumb-item active"><a href="<?= URL ?>admin/cadastros/niveis/nivel?id=<?= $nivel['id'] ?>"><?= $nivel['titulo'] ?></a></li>
+              <li class="breadcrumb-item active">Editar</li>
             </ol>
           </div>
         </div>

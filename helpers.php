@@ -16,6 +16,19 @@ function btn_editar($link) { ?>
 	</a> <?php
 }
 
+function btn_editar_text($link) { ?>
+	<a class="btn btn-sm btn-outline-primary" href="<?= $link ?>" title="Editar">
+		<i class="fas fa-edit"></i>
+		Editar
+	</a> <?php
+}
+
+function btn_visualizar($link) { ?>
+	<a class="btn btn-sm btn-outline-info" href="<?= $link ?>" title="Visualizar">
+		<i class="fas fa-eye"></i>
+	</a> <?php
+}
+
 function btn_salvar() { ?>
 	<button type="submit" class="btn-sm btn btn-success" title="Salvar">Salvar</button> <?php
 }
