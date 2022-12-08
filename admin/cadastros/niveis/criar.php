@@ -41,13 +41,8 @@ include "../../includes/aside.php";
                 <h3 class="card-title">Níveis</h3>
               </div>
               <!-- /.card-header -->
-
-
-              <!-- form start -->
-              <form method="post" action="_new.php">
-                <?php include('_form.php') ?>
-              </form>
-
+              
+              <?php include('_form_criar.php') ?>              
 
             </div>
             <!-- /.card -->

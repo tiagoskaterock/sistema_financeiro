@@ -44,9 +44,14 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
               <!-- /.card-header -->
               <div class="card-body">
 
-                <?php btn_novo(URL . "admin/cadastros/niveis/criar") ?>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_novo">
+                  <i class="fas fa-plus"></i>
+                  Novo
+                </button>
                 <br>
                 <br>
+
+                <?php include('_modal_criar.php') ?> 
 
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
@@ -93,6 +98,11 @@ $niveis = mysqli_query($conn, "SELECT * FROM niveis ORDER BY titulo");
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+
+
+
+
 
 
 <?php include "../../includes/footer.php" ?>
